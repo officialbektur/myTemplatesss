@@ -1,3 +1,6 @@
+// Strict regime
+'use strict'; 
+/* -------------------- Default --Start-- -------------------- */
 var isMobile = {
 	Android: function () {
 		return navigator.userAgent.match(/Android/i)
@@ -28,8 +31,11 @@ if (isMobile.any()) {
 } else {
 	document.body.classList.add('_pc');
 }
+
+
 // Прелоадер
 document.body.onload = function () {
+	document.body.classList.add("_lock")
 	setTimeout(function () {
 		var preloader = document.getElementById("preloader");
 		if (!preloader.classList.contains("_active")) {
@@ -37,7 +43,9 @@ document.body.onload = function () {
 			preloader.classList.add("_active");
 		}
 	}, 1000);
-}
+} 
+
+
 // Кнопка на верх + плавный скролл наверх
 document.addEventListener('DOMContentLoaded', () => {
 	let toTopBtn = document.querySelector('.up__button');
@@ -57,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 });
+
+
 // Треугольник
 let menuListSublists = document.querySelectorAll(".menu__list_sublist");
 if (menuListSublists.length > 0) {
@@ -67,6 +77,8 @@ if (menuListSublists.length > 0) {
 		});
 	}
 }
+
+
 // Мену бургер
 const bodyLock = document.body;
 const iconMenu = document.querySelector(".menu__icon");
@@ -86,6 +98,8 @@ if (iconMenu) {
 		}
 	});
 }
+
+
 // Прокрутка при клике на меню
 const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
 if (menuLinks.length > 0) {
@@ -111,3 +125,6 @@ if (menuLinks.length > 0) {
 		}
 	}
 }
+
+
+/* -------------------- Default --End-- -------------------- */

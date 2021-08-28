@@ -1,3 +1,4 @@
+@charset "UTF-8"; 
 /*---------------------- Обнуление -- start -- ----------------------*/
 * {
     padding: 0px 0px;
@@ -95,10 +96,8 @@ noscript {
 /*---------------------- Если откл. JavaScript --End-- ----------------------*/
 
 
-html,
 body {
-	min-height: 100%;
-	background: #131419;
+	background: #000000;
 	color: #ffffff;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -150,7 +149,7 @@ body._lock {
 .wrapper {
 	min-height: 100%;
 }
-/* --------------------  Шапка --Начало--  -------------------- */
+/* --------------------  Шапка --Start--  -------------------- */
 .header {
 	position: fixed;
 	top: 0px;
@@ -175,7 +174,7 @@ body._lock {
 	padding: 0px 30px;
 	min-height: 70px
 }
-/* -------  Logo --Начало--  ------- */
+/* -------  Logo --Start--  ------- */
 .header__logo {
 	border-radius: 50%;
 	position: relative;
@@ -228,13 +227,13 @@ body._lock {
 		transform: rotateY(360deg);
 	}
 }
-/* -------  Logo --Конец--  ------- */
+/* -------  Logo --End--  ------- */
 
 /* -------  Скрываем меню иконки бургера  ------- */
 .menu__icon {
 	display: none;
 }
-/* -------  Меню body --Начало--  ------- */
+/* -------  Меню body --Start--  ------- */
 .menu__list > li {
 	position: relative;
 	margin: 0px 0px 0px 20px;
@@ -248,9 +247,9 @@ body._lock {
 .menu__link:hover {
 	text-decoration: underline;
 }
-/* -------  Меню body --Конец--  ------- */
+/* -------  Меню body --End--  ------- */
 
-/* --------------------  Выпадающий меню --Начало--  -------------------- */
+/* --------------------  Выпадающий меню --Start--  -------------------- */
 .menu__sub_list {
 	position: absolute;
 	top: 100%;
@@ -288,12 +287,12 @@ body._lock {
 		-o-transition: transform .3s ease 0s;
 			transition: transform .3s ease 0s;
 }
-/* --------------------  Выпадающий меню --Конец--  -------------------- */
-/* --------------------  Шапка --Конец--  -------------------- *
+/* --------------------  Выпадающий меню --End--  -------------------- */
+/* --------------------  Шапка --End--  -------------------- *
 
 
 
-/* --------------------  PC for MOBILE --Начало--  -------------------- */
+/* --------------------  PC for MOBILE --Start--  -------------------- */
 body._pc .menu__list > li:hover .menu__sub_list {
 	opacity: 1;
 	visibility: visible;
@@ -318,11 +317,26 @@ body._mobile .menu__list > li {
 		-ms-flex-align: center;
 			align-items: center;
 }
-/* --------------------  PC for MOBILE --Конец--   -------------------- */
+/* --------------------  PC for MOBILE --End--   -------------------- */
 
 
+/* -------------------- Default --End-- -------------------- */
 
-/* --------------------  Кнопка скрола на верх --Начало--   -------------------- */
+
+/* --------------------  Page --Start--  -------------------- */
+.page {
+	padding: 85px 0px 30px 0px;
+}
+
+.page__section {
+	padding: 6px;
+} 
+.page__body {
+	text-align: justify;
+}
+/* --------------------  Page --End--  -------------------- */
+
+/* --------------------  Кнопка скрола на верх --Start--   -------------------- */
 .up__button {
 	position: fixed;
     bottom: 6%;
@@ -366,19 +380,4 @@ body._mobile .menu__list > li {
 	font-size: 1.4em;
 	font-weight: bold;
 }
-/* --------------------  Кнопка скрола на верх --Конец--   -------------------- */
-
-
-
-/* --------------------  Page --Начало--  -------------------- */
-.page {
-	padding: 85px 0px 30px 0px;
-}
-
-.page__section {
-	padding: 6px;
-} 
-.page__body {
-	text-align: justify;
-}
-/* --------------------  Page --Конец--  -------------------- */
+/* --------------------  Кнопка скрола на верх --End--   -------------------- */
