@@ -1,0 +1,160 @@
+/* ===================================  Preloader  --Start--  =================================== */
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 99999999;
+    opacity: 1;
+    visibility: visible;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all .7s ease 0s;
+		-o-transition: all .7s ease 0s;
+			transition: all .7s ease 0s;
+}
+/* ====================  Preloader shell Disappears when _show Class is Added  ==================== */
+.preloader._show{
+    opacity: 0;
+    visibility: hidden;
+}
+/* ====================  Centering  ==================== */
+.preloader__content{
+    position: relative;
+	height: 100%;
+	display: -webkit-box;
+		display: -ms-flexbox;
+			display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+/* ====================  Icon downloads  ==================== */
+.preloader__downloads {
+	position: relative;
+	display: -webkit-box;
+		display: -ms-flexbox;
+			display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	width: 70px;
+	height: 70px;
+}
+.preloader__downloads_icon {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	-webkit-animation: 1s linear infinite;
+				animation: 1s linear infinite;
+}
+.preloader__icon_first {
+	border-bottom: solid 1px #ff7473;
+	-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	-webkit-animation-name: preloaderDownloadIconFirst;
+				animation-name: preloaderDownloadIconFirst;
+}
+.preloader__icon_second {
+	border-right: solid 1px #ffc952;
+	-webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	-webkit-animation-name: preloaderDownloadIconSecond;
+				animation-name: preloaderDownloadIconSecond;
+}
+.preloader__icon_third {
+	border-top: solid 1px #47b8e0;
+	-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	-webkit-animation-name: preloaderDownloadIconThird;
+				animation-name: preloaderDownloadIconThird;
+}
+.preloader._show .preloader__downloads_icon {
+	-webkit-animation-name: none;
+		-moz-animation-name: none;
+			-o-animation-name: none;
+				-webkit-animation: none;
+				        animation: none;
+}
+/* ====================  preloaderDownloadIconFirst  --Start--  ==================== */
+@-webkit-keyframes preloaderDownloadIconFirst {
+    0% {
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+		        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+		        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+@keyframes preloaderDownloadIconFirst {
+    0% {
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+		        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+		        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+/* ====================  preloaderDownloadIconFirst  --End--  ==================== */
+
+/* ====================  preloaderDownloadIconSecond  --Start--  ==================== */
+@-webkit-keyframes preloaderDownloadIconSecond {
+	0% {
+		-webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+		        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+                transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+@keyframes preloaderDownloadIconSecond {
+	0% {
+		-webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+		        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+                transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+/* ====================  preloaderDownloadIconSecond  --End--  ==================== */
+
+/* ====================  preloaderDownloadIconThird  --Start--  ==================== */
+@-webkit-keyframes preloaderDownloadIconThird {
+    0% {
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+		        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+
+    }
+    100% {
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+		        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+
+    }
+}
+@keyframes preloaderDownloadIconThird {
+    0% {
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+		        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+
+    }
+    100% {
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+		        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+
+    }
+}
+/* ====================  preloaderDownloadIconThird  --End--  ==================== */
+/* ===================================  Preloader  --End--  =================================== */

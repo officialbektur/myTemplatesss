@@ -1,5 +1,6 @@
 /* ===================================  For PC  --Start--  =================================== */
-@media screen and (min-width: 767px){
+@media screen and (min-width: 767px) {
+
 	.menu__list {
 		display: -webkit-box;
 			display: -ms-flexbox;
@@ -10,6 +11,9 @@
 	}
 	.menu__list > li {
 		padding: 10px 0px;
+	}
+	.menu__link._activeLink {
+		text-decoration: underline;
 	}
 	.menu__sub_list {
 		-webkit-transform: translate(0px, 10%);
@@ -114,11 +118,11 @@
 		-webkit-transition: right.3s ease 0s;
 			-o-transition: right .3s ease 0s;
 				transition: right .3s ease 0s;
-		background-color: rgba(0, 0, 0, 0.85);
+		background-color: rgba(0, 0, 0, 0.95);
 		padding: 100px 30px 30px 30px;
 		overflow-y: auto;
 	}
-    .menu__body._active::before {
+	.menu__body::before {
 		content: "";
 		position: fixed;
 		top: 0px;
@@ -202,6 +206,14 @@
 
 
 	/* ===================================  Page  --Start--  =================================== */
+	.page {
+		padding: 80px 0px 30px 0px;
+	}
+	/* ====================  Page Section  --Start--  ==================== */
+	.page__content {
+		text-align: justify;
+	}
+	/* ====================  Page Section  --End--  ==================== */
 	/* ===================================  Page  --End--  =================================== */
 @supports (-webkit-appearance:none){}
 }
@@ -210,9 +222,7 @@
 	.menu__list {
 		padding: 0px 2px;
 	}
-	.menu__link {
-		font-size: 1em;
-	}
+
 @supports (-webkit-appearance:none){}
 }
 /* ===================================  For Mobile  --End--  =================================== */
