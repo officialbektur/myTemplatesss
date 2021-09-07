@@ -58,7 +58,8 @@ window.addEventListener("resize", function () {
 		}
 	}
 });
-
+/* ====================  Checking the screen resizing  --End--  ==================== */
+/* ===================================  Identify Computer or Mobile  --End--  =================================== */
 
 
 
@@ -70,8 +71,7 @@ window.addEventListener("resize", function () {
 
 
 
-/* ====================  Checking the screen resizing  --End--  ==================== */
-/* ===================================  Identify Computer or Mobile  --End--  =================================== */
+
 
 /* ====================  Dropdown List  ==================== */
 let menuListSublists = document.querySelectorAll(".menu__list_sublist");
@@ -95,10 +95,24 @@ if (menuListSublists.length > 0) {
 	}
 }
 
+
+
+
 /* ===================================  Menu Burger  --Start--  =================================== */
 const body = document.querySelector("body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
+const logo = document.querySelector('.header__logo');
+
+/* ====================  Logo click Smooth Scroll Up  --Start--  ==================== */
+logo.addEventListener('click', function () {
+	window.scrollBy({
+		top: -document.documentElement.scrollHeight,
+		behavior: 'smooth'
+	});
+});
+/* ====================  Logo click Smooth Scroll Up  --End--  ==================== */
+
 if (iconMenu) {
 	iconMenu.addEventListener('click', function (e) {
 		body.classList.toggle("_lock");
