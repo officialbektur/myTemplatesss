@@ -48,9 +48,9 @@ defineСomputerOrMobile();
 /* ====================  Checking the screen resizing  --Start--  ==================== */
 window.addEventListener("resize", function () {
 	defineСomputerOrMobile();
-	activeMenuLink();
 	dynamic_adapt();
-	if (body.classList.contains("_pc")) {
+	let windwoWidth = window.innerWidth;
+	if (windwoWidth > 767) {
 		if (iconMenu.classList.contains("_active") || body.classList.contains("_lock")) {
 			body.classList.remove("_lock");
 			iconMenu.classList.remove("_active");
@@ -58,6 +58,7 @@ window.addEventListener("resize", function () {
 		}
 	}
 });
+
 
 
 
@@ -79,35 +80,43 @@ if (menuListSublists.length > 0) {
 		const menuListSublist = menuListSublists[index];
 		menuListSublist.addEventListener("click", function (e) {
 			if (body.classList.contains("_mobile")) {
-				menuListSublist.classList.toggle("_active");
+				if (!menuListSublist.classList.contains("_active")) {
+					document.querySelectorAll(".menu__list_sublist").forEach((el) => {
+						if (el.classList.contains("_active")) {
+							el.classList.remove("_active");
+						}
+					});
+					menuListSublist.classList.add("_active");
+				} else {
+					menuListSublist.classList.remove("_active");
+				}
 			}
 		});
 	}
 }
+
+
 /* ===================================  Menu Burger  --Start--  =================================== */
 const body = document.querySelector("body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 /* ===================================  Activating the Menu When Scrolling  --Start--  =================================== */
 function activeMenuLink() {
-	if (window.innerWidth > 767) {
-		window.addEventListener("scroll", function () {
-			if (window.innerWidth > 767) {
-				const scrollDistance = window.scrollY;
-				document.querySelectorAll("._section__block").forEach((el, l) => {
-					if (el.offsetTop <= scrollDistance) {
-						document.querySelectorAll(".menu__link").forEach((el) => {
-							if (el.classList.contains("_activeLink")) {
-								el.classList.remove("_activeLink");
-							}
-						});
-						console.log(l);
-						document.querySelectorAll(".menu__link")[l].classList.add("_activeLink");
-					}
-				});
-			}
-		});
-	}
+	window.addEventListener("scroll", function () {
+		if (window.innerWidth > 767) {
+			const scrollDistance = window.scrollY;
+			document.querySelectorAll("._section__block").forEach((el, l) => {
+				if (el.offsetTop <= scrollDistance) {
+					document.querySelectorAll(".menu__link").forEach((el) => {
+						if (el.classList.contains("_activeLink")) {
+							el.classList.remove("_activeLink");
+						}
+					});
+					document.querySelectorAll(".menu__link")[l].classList.add("_activeLink");
+				}
+			});
+		}
+	});
 }
 activeMenuLink();
 /* ===================================  Activating the Menu When Scrolling  --End--  =================================== */
