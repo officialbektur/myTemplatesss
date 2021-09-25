@@ -17,9 +17,9 @@
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
-		-webkit-transition: all .3s ease 0s;
-			-o-transition: all .3s ease 0s;
-				transition: all .3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+			-o-transition: all 0.3s ease 0s;
+				transition: all 0.3s ease 0s;
 	}
 	body._mobile .menu__list_sublist._active .menu__sub_list {
 		opacity: 1;
@@ -60,7 +60,7 @@
 		width: 38px;
 		height: 22px;
 		cursor: pointer;
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-tap-highlight-color: rgba(68, 178, 195, 38%);
 	}
 	.menu__icon span,
 	.menu__icon::before,
@@ -69,9 +69,9 @@
 		position: absolute;
 		height: 10%;
 		width: 100%;
-		-webkit-transition: all .3s ease 0s;
-			-o-transition: all .3s ease 0s;
-				transition: all .3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+			-o-transition: all 0.3s ease 0s;
+				transition: all 0.3s ease 0s;
 		background-color: #ffffff;
 		box-shadow: 0px 0px 3px #ffffff;
 	}
@@ -111,9 +111,9 @@
 		right: -100%;
 		width: 100%;
 		height: 100%;
-		-webkit-transition: right.3s ease 0s;
-			-o-transition: right .3s ease 0s;
-				transition: right .3s ease 0s;
+		-webkit-transition: right 0.5s ease 0s;
+			-o-transition: right 0.5s ease 0s;
+				transition: right 0.5s ease 0s;
 		background-color: rgba(0, 0, 0, 0.85);
 		padding: 100px 30px 30px 30px;
 		overflow-y: auto;
@@ -135,6 +135,9 @@
 		padding: 0px 20%;
 		position: relative;
 		z-index: 1200;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	.menu__list li {
 		display: -webkit-box;
@@ -165,7 +168,7 @@
 	.menu__sub_list {
 		position: relative;
 		background-color: #ffffff;
-		margin: 15px 0px 0px 0px;
+		margin: 10px 0px 0px 0px;
 		display: none;
 	}
 	.menu__list_sublist-text {
@@ -184,16 +187,20 @@
 	.menu__arrow {
 		margin: 0px 0px 0px 10px;
 	}
+	.menu__sub_list > li:nth-child(1) {
+		margin-top: 0px;
+	}
+	.menu__sub_list > li:last-child {
+		margin: 12px 16px 0px;
+	}
 	.menu__sub_list > li {
-		margin: 0px 0px 0px 0px;
+		margin: 12px 16px;
 	}
 	.menu__sub_link {
 		width: 100%;
-		padding: 4px 2px;
 		color: #000000;
-		font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (767 - 320)));
+		font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (767 - 320)));
 	}
-	
 	/* ====================  Dropdown list  --End--  ==================== */
 	
 	/* ===================================  Menu Burger  --End--  =================================== */
@@ -208,8 +215,9 @@
 	.menu__list {
 		padding: 0px 2px;
 	}
-	.menu__link {
-		font-size: 1em;
+	.up__button_icon {
+		width: 36px;
+		height: 36px;
 	}
 @supports (-webkit-appearance:none){}
 }

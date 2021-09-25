@@ -20,9 +20,9 @@
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
-		-webkit-transition: all .3s ease 0s;
-			-o-transition: all .3s ease 0s;
-				transition: all .3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+			-o-transition: all 0.3s ease 0s;
+				transition: all 0.3s ease 0s;
 	}
 	body._mobile .menu__list_sublist._active .menu__sub_list {
 		opacity: 1;
@@ -63,7 +63,7 @@
 		width: 38px;
 		height: 22px;
 		cursor: pointer;
-		-webkit-tap-highlight-color: rgba(68 178 195 / 38%);
+		-webkit-tap-highlight-color: rgba(68, 178, 195, 38%);
 	}
 	.menu__icon span,
 	.menu__icon::before,
@@ -72,9 +72,9 @@
 		position: absolute;
 		height: 10%;
 		width: 100%;
-		-webkit-transition: all .3s ease 0s;
-			-o-transition: all .3s ease 0s;
-				transition: all .3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+			-o-transition: all 0.3s ease 0s;
+				transition: all 0.3s ease 0s;
 		background-color: #ffffff;
 		box-shadow: 0px 0px 3px #ffffff;
 	}
@@ -114,11 +114,11 @@
 		right: -100%;
 		width: 100%;
 		height: 100%;
-		-webkit-transition: right.3s ease 0s;
-			-o-transition: right .3s ease 0s;
-				transition: right .3s ease 0s;
-		background-color: rgba(0, 0, 0, 0.95);
 		padding: 100px 30px 30px 30px;
+		-webkit-transition: right 0.5s ease 0s;
+			-o-transition: right 0.5s ease 0s;
+				transition: right 0.5s ease 0s;
+		background-color: rgba(0, 0, 0, 0.95);
 		overflow-y: auto;
 	}
 	.menu__body::before {
