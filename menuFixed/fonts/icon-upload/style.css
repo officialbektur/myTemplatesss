@@ -28,5 +28,7 @@
 .icon-upload:before {
   content: "\e900";
   color: #000000;
+	font-size: 1.3em;
+  font-weight: bold;
   transform: rotate(180deg);
 }
