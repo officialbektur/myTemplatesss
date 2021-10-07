@@ -1,10 +1,7 @@
 /* ====================  Strict regime  ==================== */ 
 'use strict';
 /* =============================================  Default  --Start--  ============================================= */
-
 /* =============================================  here PRELOADER  ============================================= */
-
-
 /* ===================================  Identify Computer or Mobile  --Start--  =================================== */
 function defineСomputerOrMobile() {
 	var isMobile = {
@@ -61,19 +58,9 @@ window.addEventListener("resize", function () {
 });
 /* ====================  Checking the screen resizing  --End--  ==================== */
 /* ===================================  Identify Computer or Mobile  --End--  =================================== */
-
-
-
 /* =============================================  here hi Height  ============================================= */
-
 /* =============================================  here IBG  ============================================= */
-
 /* =============================================  here Responsive  ============================================= */
-
-
-
-
-
 /* ====================  Dropdown List  ==================== */
 let menuListSublists = document.querySelectorAll(".menu__list_sublist");
 if (menuListSublists.length > 0) {
@@ -95,16 +82,11 @@ if (menuListSublists.length > 0) {
 		});
 	}
 }
-
-
-
-
 /* ===================================  Menu Burger  --Start--  =================================== */
 const body = document.querySelector("body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const logo = document.querySelector('.header__logo');
-
 /* ====================  Logo click Smooth Scroll Up  --Start--  ==================== */
 logo.addEventListener('click', function () {
 	window.scrollBy({
@@ -113,8 +95,6 @@ logo.addEventListener('click', function () {
 	});
 });
 /* ====================  Logo click Smooth Scroll Up  --End--  ==================== */
-
-
 /* ===================================  Activating the Menu When Scrolling  --Start--  =================================== */
 function activeMenuLink() {
 	window.addEventListener("scroll", function () {
@@ -175,9 +155,5 @@ if (menuLinks.length > 0) {
 	}
 }
 /* ===================================  Menu Burger  --End--  =================================== */
-
-
 /* =============================================  here Scroll Up Button  ============================================= */
-
-
 /* =============================================  Default  --End--  ============================================= */
