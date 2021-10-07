@@ -57,8 +57,8 @@
 		z-index: 5;
 		display: block;
 		position: relative;
-		width: 42px;
-		height: 26px;
+		width: 46px;
+		height: 28px;
 		cursor: pointer;
 		-webkit-tap-highlight-color: rgba(68, 178, 195, 38%);
 	}
