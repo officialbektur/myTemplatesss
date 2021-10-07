@@ -13,11 +13,9 @@
 a:focus, a:active {
     outline: none;
 }
-
 nav, footer, header, aside {
     display: block;
 }
-
 html, body {
     height: 100%;
     width: 100%;
@@ -27,45 +25,36 @@ html, body {
 		-moz-text-size-adjust: 100%;
 			-webkit-text-size-adjust: 100%;
 }
-
 input, button, textarea {
     font-family: inherit;
 }
-
 input::-ms-clear {
     display: none;
 }
-
 button {
     cursor: pointer;
 }
-
 button::-moz-focus-inner {
     padding: 0px 0px;
     border: 0;
 }
-
 a,
 a:visited {
 	color: #ffffff;
   	text-decoration: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 a:hover {
   	text-decoration: none;
 }
-
 ul li {
     list-style: none;
 }
-
 img {
 	width: 100%;
 	height: 100%;
     vertical-align: top;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: inherit;
@@ -95,9 +84,6 @@ noscript {
 }
 /* ====================  If JavaScript is disabled  --End--  ==================== */
 /* =============================================  Zeroing  --End--  ============================================= */
-
-
-
 /* =============================================  My Code  --Start--  ============================================= */
 body {
 	background-color: #181818;
@@ -108,19 +94,12 @@ body {
 body._lock {
 	overflow-y: hidden;
 }
-
-
 /* =============================================  here PRELOADER  ============================================= */
-
-
-
-
 /* ====================  Bounding Сontainer  ==================== */
 .container {
 	max-width: 1200px;
 	margin: 0px auto;
 }
-
 /* ===================================  Header  --Start--  =================================== */
 .header {
 	position: relative;
@@ -228,10 +207,6 @@ body._mobile .header__logo:active {
 	}
 }
 /* ===================================  Logo  --End--  =================================== */
-
-
-
-
 /* ===================================  Menu body  --Start--  =================================== */
 /* ====================  Hide burger icon menu for PC  ==================== */
 .menu__icon {
@@ -261,7 +236,6 @@ body._mobile .header__logo:active {
 .menu__link:hover {
 	text-decoration: underline;
 }
-
 /* ===================================  Dropdown list  --Start--  =================================== */
 .menu__list_sublist {
 	cursor: pointer;
@@ -321,8 +295,6 @@ body._pc .menu__sub_link:hover {
 			transition: transform 0.6s ease 0s;
 			transition: transform 0.6s ease 0s, -webkit-transform 0.6s ease 0s;
 }
-
-
 /* ====================  PC for MOBILE  --Start--  ==================== */
 body._pc .menu__list > li:hover .menu__sub_list {
 	opacity: 1;
@@ -357,17 +329,9 @@ body._mobile .menu__list > li {
 /* ===================================  Menu body  --End--  =================================== */
 /* ===================================  Header  --End--  =================================== */
 /* =============================================  Zeroing  --End--  ============================================= */
-
-
-
 /* =============================================  here Anim  ============================================= */
-
 /* =============================================  here Progress Bar  ============================================= */
-
 /* =============================================  here Responsive  ============================================= */
-
-
-
 /* =============================================  Page  --Start--  ============================================= */
 .page__text {
 	padding: 8px;
@@ -376,9 +340,5 @@ body._mobile .menu__list > li {
 	text-align: justify;
 }
 /* =============================================  Page  --End--  ============================================= */
-
-
 /* =============================================  here Scroll Up Button  ============================================= */
-
-
 /* =============================================  My Code  --Start--  ============================================= */

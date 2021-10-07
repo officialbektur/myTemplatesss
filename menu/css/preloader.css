@@ -106,7 +106,6 @@
     }
 }
 /* ====================  preloaderDownloadIconFirst  --End--  ==================== */
-
 /* ====================  preloaderDownloadIconSecond  --Start--  ==================== */
 @-webkit-keyframes preloaderDownloadIconSecond {
 	0% {
@@ -129,30 +128,25 @@
     }
 }
 /* ====================  preloaderDownloadIconSecond  --End--  ==================== */
-
 /* ====================  preloaderDownloadIconThird  --Start--  ==================== */
 @-webkit-keyframes preloaderDownloadIconThird {
     0% {
 		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
 		        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-
     }
     100% {
 		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
 		        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-
     }
 }
 @keyframes preloaderDownloadIconThird {
     0% {
 		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
 		        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-
     }
     100% {
 		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
 		        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-
     }
 }
 /* ====================  preloaderDownloadIconThird  --End--  ==================== */

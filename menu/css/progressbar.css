@@ -14,7 +14,6 @@
     -o-animation: animProgressBarBgc 12s ease-in-out infinite;
     animation: animProgressBarBgc 12s ease-in-out infinite;
 }
-
 @-webkit-keyframes animProgressBarBgc {
     0%{background-position:0% 18%}
     50%{background-position:100% 83%}
