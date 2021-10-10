@@ -1,8 +1,10 @@
+"use strict"
 // SPOLLERS
+
 const spollersArray = document.querySelectorAll("[data-spollers]");
 if (spollersArray.length > 0) {
     // Получение обычных спойлеров
-    const spollersRegular = Array.from(spollersArray).filter(function (item, index, sel) {
+    const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
         return !item.dataset.spollers.split(",")[0];
     });
     // Иницализация обычных спойлеров
@@ -29,13 +31,13 @@ if (spollersArray.length > 0) {
 
         // Получаем уникальные брекпоинты
         let mediaQueries = breakpointsArray.map(function (item) {
-            return "{" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
+            return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
         });
         mediaQueries = mediaQueries.filter(function (item, index, self) {
             return self.indexOf(item) === index;
         });
 
-        // Разбираем с каждым брепоинтом 
+        // Работаем с каждым брепоинтом 
         mediaQueries.forEach(breakpoint => {
             const paramsArray = breakpoint.split(",");
             const mediaBreakpoint = paramsArray[1];
@@ -66,16 +68,16 @@ if (spollersArray.length > 0) {
             } else {
                 spollersBlock.classList.remove("_init");
                 initSpollerBody(spollersBlock, false);
-                spollersBlock.addEventListener("click", setSpollerAction);
+                spollersBlock.removeEventListener("click", setSpollerAction);
             }
         });
     }
-     // Работа с контентом
-    function initSpollerBody(spollersBlock, hideSpollersBody = true) {
+    // Работа с контентом
+    function initSpollerBody(spollersBlock, hideSpollerBody = true) {
         const spollerTitles = spollersBlock.querySelectorAll("[data-spoller]")
         if (spollerTitles.length > 0) {
             spollerTitles.forEach(spollerTitle => {
-                if (hideSpollersBody) {
+                if (hideSpollerBody) {
                     spollerTitle.removeAttribute("tabindex");
                     if (!spollerTitle.classList.contains("_active")) {
                         spollerTitle.nextElementSibling.hidden = true;
@@ -95,7 +97,7 @@ if (spollersArray.length > 0) {
             const oneSpoller = spollersBlock.hasAttribute("data-one-spoller") ? true : false;
             if (!spollersBlock.querySelectorAll("._slide").length) {
                 if (oneSpoller && !spollerTitle.classList.contains("_active")) {
-                    hideSpollersBody(spollersBlock);
+                    hideSpollerBody(spollersBlock);
                 }
                 spollerTitle.classList.toggle("_active");
                 _slideToggle(spollerTitle.nextElementSibling, 500);
@@ -103,7 +105,7 @@ if (spollersArray.length > 0) {
             e.preventDefault();
         }
     }
-    function hideSpollersBody(spollersBlock) {
+    function hideSpollerBody(spollersBlock) {
         const spollerActiveTitle = spollersBlock.querySelector("[data-spoller]._active");
         if (spollerActiveTitle) {
             spollerActiveTitle.classList.remove("_active");
