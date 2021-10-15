@@ -1,4 +1,4 @@
-/* ====================  Scroll Up Button + Smooth Scroll Up  --Start--  ==================== */
+/* ====================  Add class _active Scroll Up Button  --Start--  ==================== */
 document.addEventListener('DOMContentLoaded', () => {
 	let toTopBtn = document.querySelector('.up__button');
 	window.onscroll = function () {
@@ -8,12 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			toTopBtn.classList.remove("_active");
 		}
 	}
-	/* ====================  Smooth Scroll Up  ==================== */ 
-	toTopBtn.addEventListener('click', function () {
-		window.scrollBy({
-			top: -document.documentElement.scrollHeight,
-			behavior: 'smooth'
-		});
-	});
 });
-/* ====================  Scroll Up Button + Smooth Scroll Up  --End--  ==================== */
+/* ====================  Add class _active Scroll Up Button  --End--  ==================== */

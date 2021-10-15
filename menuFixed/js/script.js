@@ -86,15 +86,6 @@ if (menuListSublists.length > 0) {
 const body = document.querySelector("body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
-const logo = document.querySelector('.header__logo');
-/* ====================  Logo click Smooth Scroll Up  --Start--  ==================== */
-logo.addEventListener('click', function () {
-	window.scrollBy({
-		top: -document.documentElement.scrollHeight,
-		behavior: 'smooth'
-	});
-});
-/* ====================  Logo click Smooth Scroll Up  --End--  ==================== */
 /* ===================================  Activating the Menu When Scrolling  --Start--  =================================== */
 function activeMenuLink() {
 	window.addEventListener("scroll", function () {
@@ -137,7 +128,7 @@ if (menuLinks.length > 0) {
 		menuLink.addEventListener("click", onMenuLinkClick);
 	});
 	function onMenuLinkClick(e) {
-		const menuLink = e.target;
+		const menuLink = e.target.closest("[data-goto]");
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;

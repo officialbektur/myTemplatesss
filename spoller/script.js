@@ -1,6 +1,5 @@
 "use strict"
-// SPOLLERS
-
+/* ===================================  SPOLLERS  --Start--  =================================== */
 const spollersArray = document.querySelectorAll("[data-spollers]");
 if (spollersArray.length > 0) {
     // Получение обычных спойлеров
