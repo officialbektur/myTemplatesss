@@ -1,65 +1,61 @@
-/*---------------------- Обнуление --Start-- ----------------------*/
+@charset "UTF-8";
+/* =============================================  Zeroing  --Start--  ============================================= */
 * {
     padding: 0px 0px;
     margin: 0px 0px;
     border: 0;
 }
 *, *::before, *::after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-a:focus, a:active {
-    outline: none;
-}
-
 nav, footer, header, aside {
     display: block;
 }
-
 html, body {
     height: 100%;
     width: 100%;
-    font-size: 100%;
     line-height: 1;
-    font-size: 14px;
-    background-color: #2f2f2f;
+    font-size: 16px;
+	-webkit-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+	 		-ms-text-size-adjust: 100%;
+				text-size-adjust: 100%;
+    background-color: #272727;
 }
-
 input, button, textarea {
     font-family: inherit;
 }
-
 input::-ms-clear {
     display: none;
 }
-
 button {
     cursor: pointer;
 }
-
 button::-moz-focus-inner {
     padding: 0px 0px;
     border: 0;
 }
-
-a, a:hover, a:visited {
-    text-decoration: none;
+a, a:visited {
+	color: #ffffff;
+  	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+a:hover {
+  	text-decoration: none;
+}
 ul li {
     list-style: none;
 }
-
 img {
+	width: 100%;
+	height: 100%;
     vertical-align: top;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: inherit;
 }
+/* =============================================  Zeroing  --End--  ============================================= */
 .wrapper {
     display: flex;
     justify-content: center;
@@ -71,13 +67,13 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 60px;
 }
 /*---------------------- Обнуление --End-- ----------------------*/
-.spoller__items {
+.spoiler__items {
     margin: 0px 0px 30px 0px;
 }
-.spoller__item {
+.spoiler__item {
     margin: 0px 0px 10px 0px;
 }
-.spoller__item_title {
+.spoiler__item_title {
     padding: 15px;
     width: 100%;
     color: #ffffff;
@@ -86,14 +82,14 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
     position: relative;
 }
-.spoller__items._init .spoller__item_title {
+.spoiler__items._init .spoiler__item_title {
     cursor: pointer;
 }
-.spoller__items._init .spoller__item_title {
+.spoiler__items._init .spoiler__item_title {
     padding: 15px 40px 15px 10px;
 }
-.spoller__items._init .spoller__item_title::before,
-.spoller__items._init .spoller__item_title::after {
+.spoiler__items._init .spoiler__item_title::before,
+.spoiler__items._init .spoiler__item_title::after {
     content: "";
     width: 20px;
     height: 1px;
@@ -103,32 +99,32 @@ h1, h2, h3, h4, h5, h6 {
     right: 20px;
     transition: transform 0.3s ease 0s;
 }
-.spoller__items._init .spoller__item_title::after {
+.spoiler__items._init .spoiler__item_title::after {
    transform: rotate(-90deg);
 }
-.spoller__items._init .spoller__item_title._active::after {
+.spoiler__items._init .spoiler__item_title._active::after {
     transform: rotate(0deg);
 }
 
-.spoller__item_title {
+.spoiler__item_title {
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
     background: none;
 }
-.spoller__item_text {
+.spoiler__item_text {
     padding: 0px 15px 10px;
     color: #e7e7e7;
     line-height: 170%;
     font-weight: 700;
 }
-._items_1 .spoller__item {
+._items_1 .spoiler__item {
     background-color: #76608b;
 }
 
-._items_2 .spoller__item {
+._items_2 .spoiler__item {
     background-color: #785147;
 }
-._items_3 .spoller__item {
+._items_3 .spoiler__item {
     background-color: #7b9075;
 }
