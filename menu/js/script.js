@@ -42,25 +42,48 @@ function defineСomputerOrMobile() {
 	}
 }
 defineСomputerOrMobile();
+/* ===================================  Identify Computer or Mobile  --End--  =================================== */
 /* ====================  Checking the screen resizing  --Start--  ==================== */
 window.addEventListener("resize", function () {
+	/* ====================  Launching Functions  --Start--  ==================== */
 	defineСomputerOrMobile();
-	dynamic_adapt();
-	let windwoWidth = window.innerWidth;
-	if (windwoWidth > 767) {
+	deleteActiveWindowLarger767px();
+	deleteActiveAtSublistOnPc();
+	dynamic_adapt();	
+	/* ====================  Launching Functions  --End--  ==================== */
+});
+/* ====================  Checking the screen resizing  --End--  ==================== */
+/* ====================  Delete an asset if the screen size is larger than 767px  --Start--  ==================== */
+function deleteActiveWindowLarger767px() {
+	let windwWidth = window.innerWidth;
+	if (windwWidth > 767) {
 		if (iconMenu.classList.contains("_active") || body.classList.contains("_lock")) {
 			body.classList.remove("_lock");
 			iconMenu.classList.remove("_active");
 			menuBody.classList.remove("_active");
 		}
 	}
-});
-/* ====================  Checking the screen resizing  --End--  ==================== */
-/* ===================================  Identify Computer or Mobile  --End--  =================================== */
+}
+/* ====================  Delete an asset if the screen size is larger than 767px  --End--  ==================== */
+/* ====================  Delete the active one in the Sublist on the PC, if there is one  --Start--  ==================== */
+function deleteActiveAtSublistOnPc() {
+	if (document.body.classList.contains("_pc")) {
+		let menuListSublists = document.querySelectorAll(".menu__list_sublist");
+		if (menuListSublists.length > 0) {
+			for (let index = 0; index < menuListSublists.length; index++) {
+				const menuListSublist = menuListSublists[index];
+				if (menuListSublist.classList.contains("_active")) {
+					menuListSublist.classList.remove("_active");
+				}
+			}
+		}
+	}
+}
+/* ====================  Delete the active one in the sublist on the PC, if there is one  --End--  ==================== */
 /* =============================================  here hi Height  ============================================= */
 /* =============================================  here IBG  ============================================= */
 /* =============================================  here Responsive  ============================================= */
-/* ====================  Dropdown List  ==================== */
+/* ====================  Dropdown List  --Start--  ==================== */
 let menuListSublists = document.querySelectorAll(".menu__list_sublist");
 if (menuListSublists.length > 0) {
 	for (let index = 0; index < menuListSublists.length; index++) {
@@ -81,6 +104,7 @@ if (menuListSublists.length > 0) {
 		});
 	}
 }
+/* ====================  Dropdown List  --End--  ==================== */
 /* ===================================  Menu Burger  --Start--  =================================== */
 const body = document.querySelector("body");
 const iconMenu = document.querySelector(".menu__icon");

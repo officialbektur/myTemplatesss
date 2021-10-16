@@ -231,14 +231,6 @@ body._mobile .header__logo:active {
 	cursor: pointer;
 	user-select: none;
 }
-[data-goto] {
-	position: relative;
-	z-index: 1;
-}
-[data-goto] * {
-	position: relative;
-	z-index: -1;
-}
 .menu__link:hover {
 	text-decoration: underline;
 }
