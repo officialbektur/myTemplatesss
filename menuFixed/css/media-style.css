@@ -114,7 +114,7 @@
 		right: 0px;
 	}
 	.menu__list {
-		padding: 0px 20%;
+		margin: 0px 20%;
 		position: relative;
 		z-index: 94;
 		display: flex;
@@ -198,7 +198,7 @@
 /* ===================================  Max-Width 767px  --End--  =================================== */
 @media screen and (max-width: 360px){
 	.menu__list {
-		padding: 0px 2px;
+		margin: 0px 2px;
 	}
 	.up__button_icon {
 		width: 54px;
