@@ -1,8 +1,8 @@
 /* =============================================  My Code  --Start--  ============================================= */
 body {
 	background-color: #181818;
-	color: #ffffff;
 	overflow-x: hidden;
+	overflow-y: auto;
 }
 /* ====================  Body Lock  ==================== */
 body._lock {
