@@ -1,6 +1,20 @@
 /* ====================  Strict regime  ==================== */ 
 'use strict';
 /* =============================================  Default  --Start--  ============================================= */
+/* =============================================  Meta Viewport Adaptation for a mobile device  --Start--  ============================================= */
+function minWindowScreen250() {
+	let screenWidth = screen.width;
+	var metaViewport = document.getElementById("metaViewport");
+	if (screenWidth < 250) {
+		document.body.style.overflowX = "auto";
+		metaViewport.setAttribute("content", "width=1200");
+	} else {
+		document.body.style.overflowX = "hidden";
+		metaViewport.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
+	}
+}
+minWindowScreen250();
+/* =============================================  Meta Viewport Adaptation for a mobile device  --End--  ============================================= */
 /* =============================================  here PRELOADER  ============================================= */
 /* ===================================  Identify Computer or Mobile  --Start--  =================================== */
 function defineСomputerOrMobile() {
@@ -50,6 +64,7 @@ window.addEventListener("resize", function () {
 	deleteActiveWindowLarger767px();
 	deleteActiveAtSublistOnPc();
 	dynamic_adapt();	
+	animElement();
 	/* ====================  Launching Functions  --End--  ==================== */
 });
 /* ====================  Checking the screen resizing  --End--  ==================== */
