@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!--------------------  Meta Viewport Adaptation for a mobile device  -------------------->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" id="metaViewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<!--------------------  Top Panel Color --Start--  -------------------->
 	<!-------------------- Chrome, Firefox OS and Opera -------------------->
 	<meta name="theme-color" content="#131419" />
@@ -54,7 +54,7 @@
 	<div class="progress"></div>
 	<!-----------------------------------  Progress Bar  --End--  ----------------------------------->
 	<!---------------------------------------------  Wrapper  --Start--  --------------------------------------------->
-	<div class="wrapper">
+	<div class="wrapper _done">
 		<!-----------------------------------  Header  --Start--  ----------------------------------->
 		<header class="header">
 			<div class="container">
@@ -74,11 +74,11 @@
 							<!--------------------  Menu list  --Start--  -------------------->
 							<ul class="menu__list">
 								<li><a data-goto=".wrapper" class="menu__link">Главная</a></li>
-								<li><a data-goto=".page__one" class="menu__link">Страница №1</a></li>
-								<li><a data-goto=".page__two" class="menu__link">Страница №2</a></li>
+								<li><a data-goto=".footer" class="menu__link">Страница №1</a></li>
+								<li><a data-goto=".wrapper" class="menu__link">Страница №2</a></li>
 								<!--------------------  Dropdown list  --Start--  -------------------->
 								<li class="menu__list_sublist">
-									<div class="menu__list_sublist-text">
+									<div class="menu__list_sublist-title">
 										<a class="menu__link">Страница №3</a>
 										<span class="menu__arrow"></span>
 									</div>
@@ -87,7 +87,7 @@
 											<a data-goto=".wrapper" class="menu__sub_link">Раздел №1</a>
 										</li>
 										<li>
-											<a data-goto=".page__three" class="menu__sub_link">Раздел №2</a>
+											<a data-goto=".wrapper" class="menu__sub_link">Раздел №2</a>
 										</li>
 										<li>
 											<a data-goto=".footer" class="menu__sub_link">Раздел №3</a>
@@ -95,7 +95,7 @@
 									</ul>
 								</li>
 								<li class="menu__list_sublist">
-									<div class="menu__list_sublist-text">
+									<div class="menu__list_sublist-title">
 										<a class="menu__link">Страница №4</a>
 										<span class="menu__arrow"></span>
 									</div>
@@ -104,7 +104,7 @@
 											<a data-goto=".wrapper" class="menu__sub_link">Раздел №1</a>
 										</li>
 										<li>
-											<a data-goto=".page__three" class="menu__sub_link">Раздел №2</a>
+											<a data-goto=".wrapper" class="menu__sub_link">Раздел №2</a>
 										</li>
 										<li>
 											<a data-goto=".footer" class="menu__sub_link">Раздел №3</a>

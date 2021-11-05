@@ -7,9 +7,10 @@ document.body.onload = function () {
 			if (!preloader.classList.contains("_show")) {
 				document.body.classList.remove("_lock");
 				preloader.classList.add("_show");
+				document.querySelector(".wrapper").classList.remove("_done");
 				animElement();
 			}
-		}, 3000);
+		}, 2000);
 	}
 }
 /* ===================================  Preloader  --End--  =================================== */
