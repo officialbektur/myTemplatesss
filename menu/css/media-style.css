@@ -107,15 +107,20 @@
     background-color: rgba(0, 0, 0, 0.95);
     overflow-y: auto;
   }
-  .menu__body._active::before {
+  .menu__body::before {
     content: "";
     position: fixed;
     top: 0px;
-    left: 0px;
+    right: -100%;
     width: 100%;
     height: 70px;
     background-color: #000000;
     z-index: 10000;
+    -webkit-transition: right 0.5s ease 0s;
+    transition: right 0.5s ease 0s;
+  }
+  .menu__body._active::before {
+    right: 0%;
   }
   .menu__body._active {
     right: 0px;

@@ -1,4 +1,4 @@
-/* ====================  Strict regime  ==================== */ 
+/* ====================  Strict regime  ==================== */
 'use strict';
 /* =============================================  Default  --Start--  ============================================= */
 /* =============================================  Meta Viewport Adaptation for a mobile device  --Start--  ============================================= */
@@ -63,7 +63,7 @@ window.addEventListener("resize", function () {
 	defineСomputerOrMobile();
 	deleteActiveWindowLarger767px();
 	deleteActiveAtSublistOnPc();
-	dynamic_adapt();	
+	dynamic_adapt();
 	animElement();
 	/* ====================  Launching Functions  --End--  ==================== */
 });
@@ -127,9 +127,15 @@ const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 if (iconMenu) {
 	iconMenu.addEventListener('click', function (e) {
+		let f = document.documentElement.clientWidth - window.innerWidth;
 		body.classList.toggle("_lock");
 		iconMenu.classList.toggle("_active");
 		menuBody.classList.toggle("_active");
+		if ((!body.style.paddingRight) || body.style.paddingRight === "0px") {
+			body.style.paddingRight = Math.abs(f) + "px";
+		} else {
+			body.style.paddingRight = "0px";
+		}
 	});
 	menuBody.classList.contains('_active');
 	menuBody.addEventListener("click", function (e) {
