@@ -160,15 +160,7 @@
   }
   /* ====================  Menu body  --End--  ==================== */
   /* ====================  Header  --End--  ==================== */
-  /* ====================  here Media Header  ==================== */
   /* ====================  Dropdown List  --Start--  ==================== */
-  .menu__list > li._active .menu__sub_list {
-    display: block;
-  }
-  .menu__list > li._active .menu__arrow {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
   .menu__list_sublist-title {
     width: 100%;
     display: -webkit-box;
@@ -183,14 +175,22 @@
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+  /* ====================  Icon dropdown list  ==================== */
+  .menu__arrow {
+    margin: 0px 0px 0px 10px;
+  }
+  .menu__list > li._active .menu__arrow {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
   .menu__sub_list {
     margin: 10px 0px 0px;
     position: relative;
     background-color: #ffffff;
     display: none;
   }
-  .menu__sub_list .menu__arrow {
-    margin: 0px 0px 0px 10px;
+  .menu__list > li._active .menu__sub_list {
+    display: block;
   }
   .menu__sub_list > li:nth-child(1) {
     margin-top: 0px;
@@ -207,11 +207,9 @@
     font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (767 - 320)));
   }
   /* ====================  Dropdown List  --End--  ==================== */
-  /* ====================  here Media Dropdown List  ==================== */
   /* ===================================  Menu Burger  --End--  =================================== */
   /* ===================================  Page  --Start--  =================================== */
   /* ===================================  Page  --End--  =================================== */
-  /* ====================  here Media Page  ==================== */
   /* ===================================  Scroll Up Button  --Start--  =================================== */
   .up__button_icon {
     width: 58px;

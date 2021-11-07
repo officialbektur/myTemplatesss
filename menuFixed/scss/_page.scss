@@ -1,0 +1,29 @@
+/* =============================================  Page  --Start--  ============================================= */
+.page {
+	padding: 80px 0px 0px 0px;
+	&._minWindowScreen250 {
+		padding: 8px 0px 0px 0px;
+	}
+}
+.page__text {
+	padding: 8px;
+} 
+.page__content {
+	text-align: justify;
+}
+.page__one {
+	background-color: #9f6a54;
+}
+.page__two {
+	background-color: #195006;
+}
+.page__three {
+	background-color: #392a74;
+}
+.page__four {
+	background-color: #195006;
+}
+.page__five {
+	background-color: #ca5e3d;
+}
+/* =============================================  Page  --End--  ============================================= */

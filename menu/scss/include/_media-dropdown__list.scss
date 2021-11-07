@@ -1,10 +1,4 @@
 /* ====================  Dropdown List  --Start--  ==================== */
-.menu__list > li._active .menu__sub_list{
-	display: block;
-}
-.menu__list > li._active .menu__arrow {
-	transform: rotate(-180deg);
-}
 .menu__list_sublist-title {
 	width: 100%;
 	display: flex;
@@ -12,13 +6,20 @@
 	align-items: center;
 	flex-wrap: nowrap;
 }
+/* ====================  Icon dropdown list  ==================== */
+.menu__arrow {
+	margin: 0px 0px 0px 10px;
+	.menu__list > li._active & { 
+		transform: rotate(-180deg);
+	}
+}
 .menu__sub_list {
 	margin: 10px 0px 0px;
 	position: relative;
 	background-color: #ffffff;
 	display: none;
-	.menu__arrow {
-		margin: 0px 0px 0px 10px;
+	.menu__list > li._active & {
+		display: block;
 	}
 	& > li:nth-child(1) {
 		margin-top: 0px;

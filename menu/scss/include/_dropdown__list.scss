@@ -12,6 +12,20 @@
 		width: auto;
 	}
 }
+/* ====================  Icon dropdown list  ==================== */
+.menu__arrow {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin: 0px 0px 0px 5px;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+	border-top: solid 10px #ffffff;
+	transition: transform 0.6s ease 0s;
+	body._pc .menu__list > li:hover & {
+		transform: rotate(-180deg);
+	}
+}
 .menu__sub_list {
 	position: absolute;
 	top: 100%;
@@ -23,10 +37,18 @@
 	text-align: center;
 	z-index: 91;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	& > li {
+	body._pc .menu__list > li:hover & {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0px, 0px);
+		pointer-events: all;
+		cursor: pointer;
+		display: block;
+	}
+	> li {
 		margin: 0px 0px 6px 0px;
 	}
-	& > li:last-child{
+	> li:last-child{
 		margin: 0px 0px;
 	}
 }
@@ -35,31 +57,8 @@
 	font-weight: bold;
 	color: #ffffff;
 	user-select: none;
-}
-body._pc .menu__sub_link:hover {
-	text-decoration: underline;
-}
-/* ====================  Icon dropdown list  ==================== */
-.menu__arrow {
-	display: inline-block;
-	width: 0;
-	height: 0;
-	margin: 0px 0px 0px 5px;
-	border-left: solid 5px transparent;
-	border-right: solid 5px transparent;
-	border-top: solid 10px #ffffff;
-	transition: transform 0.6s ease 0s;
-}
-/* ====================  PC for MOBILE  --Start--  ==================== */
-body._pc .menu__list > li:hover .menu__sub_list {
-	opacity: 1;
-	visibility: visible;
-    transform: translate(0px, 0px);
-	pointer-events: all;
-	cursor: pointer;
-	display: block;
-}
-body._pc .menu__list > li:hover .menu__arrow {
-    transform: rotate(-180deg);
+	body._pc &:hover {
+		text-decoration: underline;
+	}
 }
 /* ===================================  Dropdown List  --End--  =================================== */

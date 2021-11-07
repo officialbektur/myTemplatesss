@@ -9,12 +9,12 @@
 	box-shadow: 0px 0px 7px #ff0000,0px 0px 9px #ff0000,0px 0px 12px #ff0000,0px 0px 26px #ff0000;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	transition: all 0.5s ease 0s;
-}
-body._pc .header__logo:hover {
-	box-shadow: 0px 0px 9px #ff0000,0px 0px 14px #ff0000,0px 0px 22px #ff0000,0px 0px 34px #ff0000;
-}
-body._mobile .header__logo:active {
-	box-shadow: 0px 0px 9px #ff0000,0px 0px 14px #ff0000,0px 0px 22px #ff0000,0px 0px 34px #ff0000;
+	body._pc &:hover {
+		box-shadow: 0px 0px 9px #ff0000,0px 0px 14px #ff0000,0px 0px 22px #ff0000,0px 0px 34px #ff0000;
+	}
+	body._mobile &:active {
+		box-shadow: 0px 0px 9px #ff0000,0px 0px 14px #ff0000,0px 0px 22px #ff0000,0px 0px 34px #ff0000;
+	}
 }
 /* ====================  Logo Icon  ==================== */
 .header__logo_icon {

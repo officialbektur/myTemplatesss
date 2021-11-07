@@ -5,10 +5,10 @@
 		font-size: calc(10px + (13 - 10) * ((100vw - 320px) / (767 - 320)));
 	}
 	/* ====================  NoScrript  --Start--  ==================== */
-	@import "_media-header";/* ====================  here Media Header  ==================== */
-	@import "_media-dropdown__list";/* ====================  here Media Dropdown List  ==================== */
+	@import "_media-header";// ====================  here Media Header  ==================== //
+	@import "_media-dropdown__list";// ====================  here Media Dropdown List  ==================== //
 	/* ===================================  Menu Burger  --End--  =================================== */
-	@import "_media-page";/* ====================  here Media Page  ==================== */
+	@import "../_media-page";// ====================  here Media Page  ==================== //
 	/* ===================================  Scroll Up Button  --Start--  =================================== */
 	.up__button_icon {
 		width: 58px;

@@ -130,6 +130,11 @@ body._lock {
   visibility: hidden;
 }
 
+.preloader._show .preloader__downloads_icon {
+  -webkit-animation: none;
+          animation: none;
+}
+
 /* ====================  Centering  ==================== */
 .preloader__content {
   position: relative;
@@ -193,11 +198,6 @@ body._lock {
           transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
   -webkit-animation-name: preloaderDownloadIconThird;
           animation-name: preloaderDownloadIconThird;
-}
-
-.preloader._show .preloader__downloads_icon {
-  -webkit-animation: none;
-          animation: none;
 }
 
 /* ====================  preloaderDownloadIconFirst  --Start--  ==================== */
@@ -418,7 +418,6 @@ body._mobile .header__logo:active {
 }
 
 /* ===================================  Logo  --End--  =================================== */
-/* ====================  here Logo  ==================== */
 /* ===================================  Menu body  --Start--  =================================== */
 /* ====================  Hide burger icon menu for PC  ==================== */
 .menu__icon {
@@ -429,6 +428,21 @@ body._mobile .header__logo:active {
 .menu__list > li {
   position: relative;
   margin: 0px 0px 0px 20px;
+}
+
+body._mobile .menu__list > li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+body._mobile .menu__list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu__link {
@@ -468,6 +482,26 @@ body._pc .menu__link:hover {
   width: auto;
 }
 
+/* ====================  Icon dropdown list  ==================== */
+.menu__arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0px 0px 0px 5px;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+  border-top: solid 10px #ffffff;
+  -webkit-transition: -webkit-transform 0.6s ease 0s;
+  transition: -webkit-transform 0.6s ease 0s;
+  transition: transform 0.6s ease 0s;
+  transition: transform 0.6s ease 0s, -webkit-transform 0.6s ease 0s;
+}
+
+body._pc .menu__list > li:hover .menu__arrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 .menu__sub_list {
   position: absolute;
   top: 100%;
@@ -479,6 +513,16 @@ body._pc .menu__link:hover {
   text-align: center;
   z-index: 91;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body._pc .menu__list > li:hover .menu__sub_list {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  pointer-events: all;
+  cursor: pointer;
+  display: block;
 }
 
 .menu__sub_list > li {
@@ -503,55 +547,7 @@ body._pc .menu__sub_link:hover {
   text-decoration: underline;
 }
 
-/* ====================  Icon dropdown list  ==================== */
-.menu__arrow {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin: 0px 0px 0px 5px;
-  border-left: solid 5px transparent;
-  border-right: solid 5px transparent;
-  border-top: solid 10px #ffffff;
-  -webkit-transition: -webkit-transform 0.6s ease 0s;
-  transition: -webkit-transform 0.6s ease 0s;
-  transition: transform 0.6s ease 0s;
-  transition: transform 0.6s ease 0s, -webkit-transform 0.6s ease 0s;
-}
-
-/* ====================  PC for MOBILE  --Start--  ==================== */
-body._pc .menu__list > li:hover .menu__sub_list {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-  pointer-events: all;
-  cursor: pointer;
-  display: block;
-}
-
-body._pc .menu__list > li:hover .menu__arrow {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
 /* ===================================  Dropdown List  --End--  =================================== */
-/* ====================  here Dropdown list  ==================== */
-body._mobile .menu__list > li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-body._mobile .menu__list > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* ====================  PC for MOBILE  --End--  ==================== */
 /* ===================================  Menu body  --End--  =================================== */
 /* ===================================  Header  --End--  =================================== */
 /* ===================================  Progress Bar  --Start--  =================================== */

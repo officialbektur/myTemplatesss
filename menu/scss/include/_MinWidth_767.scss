@@ -11,16 +11,18 @@
 		pointer-events: none;
 		transition: all 0.3s ease 0s;
 	}
-	body._mobile .menu__list_sublist._active .menu__sub_list {
-		opacity: 1;
-		visibility: visible;
-		transform: translate(0px, 0px);
-		pointer-events: all;
-		cursor: pointer;
-		display: block;
-	}
-	body._mobile .menu__list_sublist._active .menu__arrow {
-		transform: rotate(-180deg);
+	body._mobile .menu__list_sublist._active {
+		.menu__sub_list {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0px, 0px);
+			pointer-events: all;
+			cursor: pointer;
+			display: block;
+		}
+		.menu__arrow {
+			transform: rotate(-180deg);
+		}
 	}
 }
 /* =============================================  For PC  --Start--  --End--  ============================================= */

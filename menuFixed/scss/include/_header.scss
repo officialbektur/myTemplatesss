@@ -1,0 +1,57 @@
+/* ===================================  Header  --Start--  =================================== */
+.header {
+	padding-top: 4px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 90;
+	background-color: #000000;
+	&._minWindowScreen250 {
+		position: relative;
+	}
+}
+.header__body {
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
+	min-height: 70px
+}
+@import "_header__logo";// ====================  here Logo  ==================== //
+/* ===================================  Menu body  --Start--  =================================== */
+/* ====================  Hide burger icon menu for PC  ==================== */
+.menu__icon {
+	display: none;
+}
+/* ====================  Menu list  ==================== */
+.menu__list > li {
+	position: relative;
+	margin: 0px 0px 0px 20px;
+	body._mobile & {
+		flex: 1 1 auto;
+	}
+	body._mobile & {
+		display: flex;
+		align-items: center;
+	}
+}
+.menu__link {
+	padding: 10px 0px;
+	width: 100%;
+	font-size: 1em;
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(68, 178, 195, 0.3);
+	body._pc &:hover {
+		text-decoration: underline;
+	}
+	&._activeLink {
+		text-decoration: underline;
+	}
+}
+@import "_dropdown__list";// ====================  here Dropdown list  ==================== //
+/* ===================================  Menu body  --End--  =================================== */
+/* ===================================  Header  --End--  =================================== */

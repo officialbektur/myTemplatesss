@@ -15,6 +15,9 @@
 	&._show{
 		opacity: 0;
 		visibility: hidden;
+		& .preloader__downloads_icon {
+			animation: none;
+		}
 	}
 }
 /* ====================  Centering  ==================== */
@@ -34,12 +37,12 @@
 	width: 70px;
 	height: 70px;
 	&_icon {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	animation: 1s linear infinite;
-}
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		animation: 1s linear infinite;
+	}
 }
 .preloader__icon {
 	&_first {
@@ -57,9 +60,6 @@
 		transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
 		animation-name: preloaderDownloadIconThird;
 	}
-}
-.preloader._show .preloader__downloads_icon {
-    animation: none;
 }
 /* ====================  preloaderDownloadIconFirst  --Start--  ==================== */
 @keyframes preloaderDownloadIconFirst {

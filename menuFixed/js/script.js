@@ -1,7 +1,26 @@
-/* ====================  Strict regime  ==================== */ 
+/* ====================  Strict regime  ==================== */
 'use strict';
 /* =============================================  Default  --Start--  ============================================= */
 /* =============================================  here PRELOADER  ============================================= */
+/* =============================================  Meta Viewport Adaptation for a mobile device  --Start--  ============================================= */
+function minWindowScreen250() {
+	let screenWidth = screen.width;
+	let metaViewport = document.getElementById("metaViewport");
+	if (screenWidth < 250) {
+		document.body.classList.add("_minWindowScreen250");
+		metaViewport.setAttribute("content", "width=1200");
+		document.querySelector(".header").classList.add("_minWindowScreen250");
+		document.querySelector(".page").classList.add("_minWindowScreen250");
+		delete activeMenuLink();
+	} else {
+		document.body.classList.remove("_minWindowScreen250");
+		metaViewport.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
+		document.querySelector(".header").classList.remove("_minWindowScreen250");
+		document.querySelector(".page").classList.remove("_minWindowScreen250");
+	}
+}
+minWindowScreen250();
+/* =============================================  Meta Viewport Adaptation for a mobile device  --End--  ============================================= */
 /* ===================================  Identify Computer or Mobile  --Start--  =================================== */
 function defineСomputerOrMobile() {
 	var isMobile = {
@@ -50,7 +69,9 @@ window.addEventListener("resize", function () {
 	activeMenuLink();
 	deleteActiveWindowLarger767px();
 	deleteActiveAtSublistOnPc();
-	dynamic_adapt();	
+	dynamic_adapt();
+	animElement();
+	minWindowScreen250();
 	/* ====================  Launching Functions  --End--  ==================== */
 });
 /* ====================  Checking the screen resizing  --End--  ==================== */
@@ -136,6 +157,7 @@ if (iconMenu) {
 		body.classList.toggle("_lock");
 		iconMenu.classList.toggle("_active");
 		menuBody.classList.toggle("_active");
+		addClickPaddingRight();
 	});
 	menuBody.classList.contains('_active');
 	menuBody.addEventListener("click", function (e) {
@@ -143,8 +165,17 @@ if (iconMenu) {
 			body.classList.remove("_lock");
 			iconMenu.classList.remove("_active");
 			menuBody.classList.remove("_active");
+			addClickPaddingRight();
 		}
 	});
+	function addClickPaddingRight() {
+		let paddingRight = document.documentElement.clientWidth - window.innerWidth;
+		if ((!body.style.paddingRight) || body.style.paddingRight === "0px") {
+			body.style.paddingRight = Math.abs(paddingRight) + "px";
+		} else {
+			body.style.paddingRight = "0px";
+		}
+	}
 }
 /* ====================  Scrolling when Clicking on a data-goto=""  ==================== */
 const menuLinks = document.querySelectorAll("[data-goto]");
@@ -158,9 +189,10 @@ if (menuLinks.length > 0) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
 			if (iconMenu.classList.contains("_active")) {
-				document.body.classList.remove("_lock");
+				body.classList.remove("_lock");
 				iconMenu.classList.remove("_active");
 				menuBody.classList.remove("_active");
+				addClickPaddingRight();
 			}
 			window.scrollTo({
 				top: gotoBlockValue,
