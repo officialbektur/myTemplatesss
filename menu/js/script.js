@@ -9,13 +9,9 @@ function minWindowScreen250() {
 	if (screenWidth < 250) {
 		document.body.classList.add("_minWindowScreen250");
 		metaViewport.setAttribute("content", "width=1200");
-		document.querySelector(".header").classList.add("_minWindowScreen250");
-		document.querySelector(".page").classList.add("_minWindowScreen250");
 	} else {
 		document.body.classList.remove("_minWindowScreen250");
 		metaViewport.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
-		document.querySelector(".header").classList.remove("_minWindowScreen250");
-		document.querySelector(".page").classList.remove("_minWindowScreen250");
 	}
 }
 minWindowScreen250();
@@ -135,7 +131,6 @@ if (iconMenu) {
 		body.classList.toggle("_lock");
 		iconMenu.classList.toggle("_active");
 		menuBody.classList.toggle("_active");
-		addClickPaddingRight();
 	});
 	menuBody.classList.contains('_active');
 	menuBody.addEventListener("click", function (e) {
@@ -143,17 +138,8 @@ if (iconMenu) {
 			body.classList.remove("_lock");
 			iconMenu.classList.remove("_active");
 			menuBody.classList.remove("_active");
-			addClickPaddingRight();
 		}
 	});
-	function addClickPaddingRight() {
-		let paddingRight = document.documentElement.clientWidth - window.innerWidth;
-		if ((!body.style.paddingRight) || body.style.paddingRight === "0px") {
-			body.style.paddingRight = Math.abs(paddingRight) + "px";
-		} else {
-			body.style.paddingRight = "0px";
-		}
-	}
 }
 /* ====================  Scrolling when Clicking on a data-goto=""  ==================== */
 const menuLinks = document.querySelectorAll("[data-goto]");
@@ -170,7 +156,6 @@ if (menuLinks.length > 0) {
 				body.classList.remove("_lock");
 				iconMenu.classList.remove("_active");
 				menuBody.classList.remove("_active");
-				addClickPaddingRight();
 			}
 			window.scrollTo({
 				top: gotoBlockValue,

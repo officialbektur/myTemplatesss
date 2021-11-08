@@ -135,8 +135,8 @@ const menuBody = document.querySelector(".menu__body");
 /* ===================================  Activating the Menu When Scrolling  --Start--  =================================== */
 function activeMenuLink() {
 	window.addEventListener("scroll", function () {
-		if (window.innerWidth > 767) {
-			const scrollDistance = window.scrollY;
+		if (screen.width > 767) {
+			const scrollDistance = window.scrollY + document.querySelector(".header").offsetHeight;
 			document.querySelectorAll("._section__block").forEach((el, l) => {
 				if (el.offsetTop <= scrollDistance) {
 					document.querySelectorAll(".menu__link").forEach((el) => {
@@ -157,7 +157,6 @@ if (iconMenu) {
 		body.classList.toggle("_lock");
 		iconMenu.classList.toggle("_active");
 		menuBody.classList.toggle("_active");
-		addClickPaddingRight();
 	});
 	menuBody.classList.contains('_active');
 	menuBody.addEventListener("click", function (e) {
@@ -165,17 +164,8 @@ if (iconMenu) {
 			body.classList.remove("_lock");
 			iconMenu.classList.remove("_active");
 			menuBody.classList.remove("_active");
-			addClickPaddingRight();
 		}
 	});
-	function addClickPaddingRight() {
-		let paddingRight = document.documentElement.clientWidth - window.innerWidth;
-		if ((!body.style.paddingRight) || body.style.paddingRight === "0px") {
-			body.style.paddingRight = Math.abs(paddingRight) + "px";
-		} else {
-			body.style.paddingRight = "0px";
-		}
-	}
 }
 /* ====================  Scrolling when Clicking on a data-goto=""  ==================== */
 const menuLinks = document.querySelectorAll("[data-goto]");
@@ -192,7 +182,6 @@ if (menuLinks.length > 0) {
 				body.classList.remove("_lock");
 				iconMenu.classList.remove("_active");
 				menuBody.classList.remove("_active");
-				addClickPaddingRight();
 			}
 			window.scrollTo({
 				top: gotoBlockValue,

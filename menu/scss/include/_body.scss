@@ -5,4 +5,7 @@ body {
 	&._lock {
 		overflow-y: hidden;
 	}
+	&._minWindowScreen250 {
+		overflow: auto;
+	}
 }
