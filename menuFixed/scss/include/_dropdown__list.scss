@@ -41,9 +41,9 @@
 		opacity: 1;
 		visibility: visible;
 		transform: translate(0px, 0px);
+		display: block;
 		pointer-events: all;
 		cursor: pointer;
-		display: block;
 	}
 	> li {
 		margin: 0px 0px 6px 0px;

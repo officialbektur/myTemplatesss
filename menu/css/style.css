@@ -108,6 +108,10 @@ body._lock {
   overflow-y: hidden;
 }
 
+body._minWindowScreen250 {
+  overflow: auto;
+}
+
 /* ===================================  Preloader  --Start--  =================================== */
 .preloader {
   position: fixed;
@@ -609,6 +613,9 @@ body._pc .menu__sub_link:hover {
   z-index: 80;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(68, 178, 195, 0.3);
+  pointer-events: all;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .up__button._active {
@@ -617,14 +624,15 @@ body._pc .menu__sub_link:hover {
 }
 
 .up__button_icon {
+  position: relative;
   width: 54px;
   height: 54px;
   background: #dadada;
   -webkit-box-shadow: 0px 0px 2px 0px #b8b8b8,0px 0px 4px 0px #b8b8b8,0px 0px 6px 0px #b8b8b8,0px 0px 10px 0px #b8b8b8;
           box-shadow: 0px 0px 2px 0px #b8b8b8,0px 0px 4px 0px #b8b8b8,0px 0px 6px 0px #b8b8b8,0px 0px 10px 0px #b8b8b8;
+  pointer-events: all;
   -webkit-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
-  position: relative;
 }
 
 body._pc .up__button_icon:hover {
