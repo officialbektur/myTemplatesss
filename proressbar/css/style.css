@@ -104,88 +104,84 @@ body {
   overflow-y: auto;
 }
 
+body._lock {
+  overflow-y: hidden;
+}
+
+body._minWindowScreen250 {
+  overflow: auto;
+}
+
 .wrapper {
+  background-color: #34434f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   opacity: 1;
   visibility: visible;
 }
 
+.wrapper._done {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 /* ====================  Bounding Сontainer  --Start--  ==================== */
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0px auto;
-  padding: 0px 12px;
 }
 
 /* ====================  Bounding Сontainer  --Start--  ==================== */
-/* =============================================  Spoilers  --Start--  ============================================= */
-.spoiler__items {
-  margin: 0px 0px 30px 0px;
+/* ===================================  Progress Bar  --Start--  =================================== */
+.progressbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  z-index: 1111;
+  background: linear-gradient(172deg, #23f0bb, #50ff00, #f9ff00, #e11e1e, #8d00ff, #ff007a, #ff6700, #23f0bb, #f9ff00, #e11e1e, #e11e1e, #8d00ff, #ff6700);
+  background-size: 250% 60%;
+  -webkit-animation: animProgressBarBgc 12s ease-in-out infinite;
+          animation: animProgressBarBgc 12s ease-in-out infinite;
 }
 
-.spoiler__item {
-  margin: 0px 0px 10px 0px;
+@-webkit-keyframes animProgressBarBgc {
+  0% {
+    background-position: 0% 18%;
+  }
+  50% {
+    background-position: 100% 83%;
+  }
+  100% {
+    background-position: 0% 18%;
+  }
 }
 
-.spoiler__item_title {
-  padding: 15px;
-  width: 100%;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: left;
-  background: none;
-  background-color: transparent;
-  position: relative;
+@keyframes animProgressBarBgc {
+  0% {
+    background-position: 0% 18%;
+  }
+  50% {
+    background-position: 100% 83%;
+  }
+  100% {
+    background-position: 0% 18%;
+  }
 }
 
-.spoiler__items._init .spoiler__item_title {
-  padding: 15px 40px 15px 10px;
-  cursor: pointer;
-}
-
-.spoiler__items._init .spoiler__item_title::before, .spoiler__items._init .spoiler__item_title::after {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-}
-
-.spoiler__items._init .spoiler__item_title::after {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.spoiler__items._init .spoiler__item_title._active::after {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-.spoiler__item_text {
-  padding: 0px 15px 10px;
-  color: #e7e7e7;
-  line-height: 170%;
-  font-weight: 700;
-}
-
-/* =============================================  Spoilers  --Start--  ============================================= */
-._items_1 .spoiler__item {
-  background-color: #76608b;
-}
-
-._items_2 .spoiler__item {
-  background-color: #785147;
-}
-
-._items_3 .spoiler__item {
-  background-color: #7b9075;
-}
-
+/* ===================================  Progress Bar  --End--  =================================== */
 /* =============================================  My Code  --End--  ============================================= */

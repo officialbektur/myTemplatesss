@@ -1,4 +1,3 @@
-"use strict"
 /* ===================================  Spoilers  --Start--  =================================== */
 const spoilersArray = document.querySelectorAll("[data-spoilers]");
 if (spoilersArray.length > 0) {
