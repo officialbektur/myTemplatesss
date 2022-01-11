@@ -1,13 +1,13 @@
 /* ===================================  Anim  --Start--  =================================== */
 /* ====================  class="_anime-item _anime-no-hide"  ==================== */
-function animElement() {
+function animElements() {
 	let animItems = document.querySelectorAll("._anime-item")
 	if (animItems.length > 0) {
 		window.addEventListener("scroll", animOnScroll)
 		function animOnScroll() {
 			for (let index = 0; index < animItems.length; index++) {
 				const animItem = animItems[index];
-				const animItemHeight = animItem.offsetHeight
+				const animItemHeight = animItem.offsetHeight;
 				const animItemOffset = offset(animItem).top;
 				const animStart = 4;
 				/* ====================  Let animItemPoint  ==================== */
@@ -35,5 +35,5 @@ function animElement() {
 		}, 600);
 	}
 }
-animElement();
+animElements();
 /* ===================================  Anim  --End--  =================================== */

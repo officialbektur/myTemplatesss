@@ -1,5 +1,5 @@
 /* ===================================  Progress Bar  --Start--  =================================== */
-const progress = document.querySelector(".progress");
+const progress = document.querySelector(".progressbar");
 window.addEventListener("scroll", progressBar)
 function progressBar() {
     let windowScrollTop = document.body.scrollTop || document.documentElement.scrollTop;

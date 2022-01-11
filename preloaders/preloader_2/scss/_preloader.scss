@@ -42,17 +42,17 @@
 			animation: none;
 		}
 		&-first {
-			border-bottom: solid 2px #ff7473;       
+			border-bottom: solid 3px #ff7473;       
 			transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
 			animation-name: preloaderDownloadIconFirst;
 		}
 		&-second {
-			border-right: solid 2px #ffc952;
+			border-right: solid 3px #ffc952;
 			   transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
 			animation-name: preloaderDownloadIconSecond;
 		}
 		&-third {
-			border-top: solid 2px #47b8e0;
+			border-top: solid 3px #47b8e0;
 			transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
 			animation-name: preloaderDownloadIconThird;
 		}

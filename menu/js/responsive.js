@@ -15,7 +15,7 @@ if (move_objects.length > 0) {
 		}
 	}
 }
-function dynamic_adapt() {
+function responsive() {
 	var w = document.querySelector("body").offsetWidth;
 	if (move_objects.length > 0) {
 		for (var _index11 = 0; _index11 < move_objects.length; _index11++) {
@@ -39,7 +39,7 @@ function dynamic_adapt() {
 					}
 				} else {
 					if (_el7.classList.contains("js-move_done_" + data_bp)) {
-						dynamic_adaptive_back(_el7);
+						responsive_back(_el7);
 						_el7.classList.remove("js-move_done_" + data_bp);
 					}
 				}
@@ -47,7 +47,7 @@ function dynamic_adapt() {
 		}
 	}
 }
-function dynamic_adaptive_back(el) {
+function responsive_back(el) {
 	var index_original = el.getAttribute("data-move-index");
 	var move_place = move_array[index_original];
 	var parent_place = move_place["parent"];
@@ -79,5 +79,5 @@ function index_of_elements(parent) {
 	}
 	return children;
 }
-dynamic_adapt();
+responsive();
 /* ===================================  Dynamic Transfer of Objects  --End--  =================================== */

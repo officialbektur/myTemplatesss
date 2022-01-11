@@ -64,7 +64,7 @@ window.addEventListener("resize", function () {
 	deleteActiveWindowLarger767px();
 	deleteActiveAtSublistOnPc();
 	dynamic_adapt();
-	animElement();
+	animElements();
 	minWindowScreen250();
 	/* ====================  Launching Functions  --End--  ==================== */
 });
@@ -100,6 +100,7 @@ function deleteActiveAtSublistOnPc() {
 /* =============================================  here Hi Height  ============================================= */
 /* =============================================  here IBG  ============================================= */
 /* =============================================  here Responsive  ============================================= */
+/* =============================================  here Activation when Scrolling  ============================================= */
 /* ====================  Dropdown List  --Start--  ==================== */
 let menuListSublists = document.querySelectorAll(".menu__list_sublist");
 if (menuListSublists.length > 0) {

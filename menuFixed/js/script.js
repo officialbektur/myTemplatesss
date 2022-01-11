@@ -69,8 +69,8 @@ window.addEventListener("resize", function () {
 	activeMenuLink();
 	deleteActiveWindowLarger767px();
 	deleteActiveAtSublistOnPc();
-	dynamic_adapt();
-	animElement();
+	responsive();
+	animElements();
 	minWindowScreen250();
 	/* ====================  Launching Functions  --End--  ==================== */
 });
@@ -106,6 +106,7 @@ function deleteActiveAtSublistOnPc() {
 /* =============================================  here Hi Height  ============================================= */
 /* =============================================  here IBG  ============================================= */
 /* =============================================  here Responsive  ============================================= */
+/* =============================================  here Activation when Scrolling  ============================================= */
 /* ====================  Dropdown List  --Start--  ==================== */
 let menuListSublists = document.querySelectorAll(".menu__list_sublist");
 if (menuListSublists.length > 0) {
@@ -132,26 +133,7 @@ if (menuListSublists.length > 0) {
 const body = document.querySelector("body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
-/* ===================================  Activating the Menu When Scrolling  --Start--  =================================== */
-function activeMenuLink() {
-	window.addEventListener("scroll", function () {
-		if (screen.width > 767) {
-			const scrollDistance = window.scrollY + document.querySelector(".header").offsetHeight;
-			document.querySelectorAll("._section__block").forEach((el, l) => {
-				if (el.offsetTop <= scrollDistance) {
-					document.querySelectorAll(".menu__link").forEach((el) => {
-						if (el.classList.contains("_activeLink")) {
-							el.classList.remove("_activeLink");
-						}
-					});
-					document.querySelectorAll(".menu__link")[l].classList.add("_activeLink");
-				}
-			});
-		}
-	});
-}
-activeMenuLink();
-/* ===================================  Activating the Menu When Scrolling  --End--  =================================== */
+/* =============================================  here Active Menu Link  ============================================= */
 if (iconMenu) {
 	iconMenu.addEventListener('click', function (e) {
 		body.classList.toggle("_lock");
@@ -177,7 +159,7 @@ if (menuLinks.length > 0) {
 		const menuLink = e.target.closest("[data-goto]");
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top - document.querySelector(".header").offsetHeight + pageYOffset;
 			if (iconMenu.classList.contains("_active")) {
 				body.classList.remove("_lock");
 				iconMenu.classList.remove("_active");
